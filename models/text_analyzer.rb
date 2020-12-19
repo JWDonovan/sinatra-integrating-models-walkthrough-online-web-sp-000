@@ -13,15 +13,15 @@ class TextAnalyzer
   end
 
   def number_of_vowels
-    text.scan(/[aeoui]/).count
+    text.scan(/[aeoui]/i).count
   end
 
   def number_of_consonants
-    text.scan(/[bcdfghjklmnpqrstvwxyz]/).count
+    text.scan(/[bcdfghjklmnpqrstvwxyz]/i).count
   end
 
   def most_used_letter
-    s1 = text.gsub(/[^a-z]/, '')
+    s1 = text.gsub(/[^a-z]/i, '')
     arr = s1.split('')
     arr1 = arr.uniq
     arr2 = {}
