@@ -9,4 +9,12 @@ class TextAnalyzer
   def number_of_words
     @text.split(" ").count
   end
+
+  def number_of_vowels
+    @text.scan(/[aeiou]/i).count
+  end
+
+  def number_of_consonants
+    @text.scan(/[bcdfghjklmnpqrstvwxyz]/i).count
+  end
 end
