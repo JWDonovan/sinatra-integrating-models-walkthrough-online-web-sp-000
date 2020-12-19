@@ -5,23 +5,24 @@ class TextAnalyzer
   attr_reader :text
 
   def initialize(text)
-    @text = text
+    @text = text.downcase
   end
 
   def number_of_words
-    text.split(" ").count
+    words = text.split(" ")
+    words.count
   end
 
   def number_of_vowels
-    text.scan(/[aeoui]/i).count
+    text.scan(/[aeoui]/).count
   end
 
   def number_of_consonants
-    text.scan(/[bcdfghjklmnpqrstvwxyz]/i).count
+    text.scan(/[bcdfghjklmnpqrstvwxyz]/).count
   end
 
   def most_used_letter
-    s1 = text.gsub(/[^a-z]/i, '')
+    s1 = text.gsub(/[^a-z]/, '')
     arr = s1.split('')
     arr1 = arr.uniq
     arr2 = {}
