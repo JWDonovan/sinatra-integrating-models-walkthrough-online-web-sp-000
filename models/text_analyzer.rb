@@ -9,8 +9,7 @@ class TextAnalyzer
   end
 
   def number_of_words
-    words = text.split(" ")
-    words.count
+    text.split(" ").count
   end
 
   def number_of_vowels
