@@ -8,16 +8,16 @@ class TextAnalyzer
     @text = text.downcase
   end
 
-  def count_of_words
+  def number_of_words
     words = text.split(" ")
     words.count
   end
 
-  def count_of_vowels
+  def number_of_vowels
     text.scan(/[aeoui]/).count
   end
 
-  def count_of_consonants
+  def number_of_consonants
     text.scan(/[bcdfghjklmnpqrstvwxyz]/).count
   end
 
